@@ -1,0 +1,12 @@
+/* The metric-adjusted Arial face at the end of --font-sans (see ../fonts.ts). The
+   values are exactly what next/font/google 14.2.35 generated for Plus Jakarta Sans
+   (from Google's published font metrics), so placeholder text before the woff2 arrives, and every
+   glyph the font does not have, render exactly as before the fonts were self-hosted. */
+@font-face {
+  font-family: "__sans_Fallback";
+  src: local("Arial");
+  ascent-override: 98.88%;
+  descent-override: 21.15%;
+  line-gap-override: 0.00%;
+  size-adjust: 104.98%;
+}

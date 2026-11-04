@@ -1,13 +1,7 @@
 import type { Metadata, Viewport } from 'next';
-import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
-
-const sans = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-  weight: ['400', '500', '600', '700'],
-});
+// Self-hosted, no build-time network fetch: see ./fonts.ts.
+import { fontVariables } from './fonts';
 
 export const metadata: Metadata = {
   title: 'Planet A Foods · Workspace',
@@ -37,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={sans.variable}>
+    <html lang="en" style={fontVariables}>
       <head>
         {/* Set the theme before first paint (no flash of wrong theme).
             Uses stored choice, else the OS preference. Default = system. */}
